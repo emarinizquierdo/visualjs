@@ -29,7 +29,7 @@ body {
 .god {
     position: absolute;
     left: 0px;
-    background-image: url('/images/god.gif');
+    background-image: url('../images/god.gif');
     width: 30px;
     height: 30px;
     -webkit-transition: all 2000ms ease;
@@ -41,7 +41,7 @@ body {
 
 .male {
     position: absolute;
-    background-image: url('/images/person.gif');
+    background-image: url('../images/person.gif');
     width: 30px;
     height: 30px;
     -webkit-transition: all 2000ms ease;
@@ -53,7 +53,7 @@ body {
 
 .female {
     position: absolute;
-    background-image: url('/images/girl.gif');
+    background-image: url('../images/girl.gif');
     width: 30px;
     height: 30px;
     -webkit-transition: all 2000ms ease;
