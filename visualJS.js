@@ -147,11 +147,22 @@ var vJS = (function(visualJS) {
 
     };
 
+    Person.prototype.moveHorizontal = function(){
+        this.body.style.left = _space.getRandomPos().x;
+    }
+
+    Person.prototype.moveVertial = function(){
+        this.body.style.top = _space.getRandomPos().y;
+    }
+
     Person.prototype.move = function() {
         var that = this;
         setInterval(function() {
-            that.body.style.left = _space.getRandomPos().x;
-            that.body.style.top = _space.getRandomPos().y;
+            if(Math.random()*2 > 1){
+                that.moveHorizontal();
+            }else{
+                that.moveVertial();
+            }
         }, 2000);
 
     };
