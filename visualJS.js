@@ -163,7 +163,7 @@ var vJS = (function(visualJS) {
             }else{
                 that.moveVertial();
             }
-        }, 2000);
+        }, Math.random() * 4000);
 
     };
 
