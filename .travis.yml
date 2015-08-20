@@ -7,7 +7,8 @@ before_script:
 #  - bower install
 #services: mongodb
 after_success:
+  - cat $DEPLOY_KEY > .travis/deploy_key.pem
   - chmod 600 .travis/deploy_key.pem # this key should have push access
   - ssh-add .travis/deploy_key.pem
-  - git remote add deploy DEPLOY_REPO_URI_GOES_HERE
+  - git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/pro-hermes
   - git push deploy
