@@ -4,6 +4,7 @@ node_js:
   - '0.11'
 before_script:
   - npm install -g bower grunt-cli
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 #  - bower install
 #services: mongodb
 after_success:
@@ -12,4 +13,3 @@ after_success:
   - ssh-add .travis/deploy_key.pem
   - git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/pro-hermes
   - git push deploy
-  
