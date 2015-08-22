@@ -8,6 +8,7 @@ before_script:
 #  - bower install
 #services: mongodb
 after_success:
+  - eval "$(ssh-agent -s)"
   - ssh-add $DEPLOY_KEY
   - git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/pro-hermes
   - git push deploy
