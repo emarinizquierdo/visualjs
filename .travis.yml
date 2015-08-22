@@ -14,3 +14,4 @@ after_success:
   - ssh-add .travis/deploy_key.pem
   - git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/pro-hermes
   - git push deploy
+  
