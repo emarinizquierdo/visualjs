@@ -8,11 +8,11 @@ before_script:
 #  - bower install
 #services: mongodb
 after_success:
-  - export DEBIAN_FRONTEND=noninteractive
   - mkdir .travis
   - echo $DEPLOY_KEY > .travis/deploy_key.pem
   - chmod 600 .travis/deploy_key.pem # this key should have push access
   - eval `ssh-agent -s` # Make sure ssh agent is working
+  - ssh -o BatchMode=no
   - ssh-add .travis/deploy_key.pem
   - rm -rf _deploy
   - mkdir _deploy
