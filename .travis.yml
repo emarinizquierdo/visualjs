@@ -9,9 +9,9 @@ before_script:
 #services: mongodb
 after_success:
   - mkdir .travis
-  - echo $DEPLOY_KEY > .travis/deploy_key.pem
-  - chmod 600 .travis/deploy_key.pem # this key should have push access
-  - cp .travis/deploy_key.pem ~/.ssh/id_rsa
+  - openssl aes-256-cbc -K $encrypted_c60eefdee1b2_key -iv $encrypted_c60eefdee1b2_iv -in id_rsa.pub.enc -out deploy-key -d
+  - chmod 600 deploy-key # this key should have push access
+  - cp deploy-key ~/.ssh/id_rsa
   - rm -rf _deploy
   - mkdir _deploy
   - cd _deploy
