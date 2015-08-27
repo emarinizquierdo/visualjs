@@ -16,4 +16,3 @@ after_success:
 - cd _deploy
 - git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/visualjs.git
 - git push deploy master
-
