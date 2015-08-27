@@ -14,5 +14,5 @@ after_success:
 - rm -rf _deploy
 - mkdir _deploy
 - cd _deploy
-- git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/pro-hermes
+- git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/visualjs.git
 - git push deploy master
